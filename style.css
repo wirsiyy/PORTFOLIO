@@ -135,10 +135,12 @@ position: relative;
 }
 .nav-menu-btn{
     display: none;
+    z-index: 1000;
 }
 .nav-menu-btn i{
     font-size: 28px;
     cursor: pointer;
+    color: var(--text-color-second);
 } 
 /* container design */
 .wrapper{
@@ -656,10 +658,12 @@ footer{
         padding: 21px 21px 11px 19px;
 
     }
+   
 }
 
 
 /* Media query ==540px responsive */
+
 
 @media only screen and (max-width: 540px){
     .featured-name{
@@ -676,5 +680,31 @@ footer{
     }
     .featured-text-info{
         padding-right: 06rem;
+    }
+    /* Ensure hamburger menu is visible */
+    .nav-menu-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        min-height: 450px;
+        height: 90vh;
+        transition: .3s;
+    }
+    .nav-menu.responsive{
+        left: 0;
+    }
+    .nav_menu_list{
+        flex-direction: column;
     }
 }

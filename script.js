@@ -9,6 +9,21 @@ function myMenuFunction(){
     }
 }
 
+// Close mobile menu when clicking nav links
+document.addEventListener('DOMContentLoaded', function() {
+    const navMenu = document.getElementById('myNavMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove responsive class to hide menu
+            if (navMenu.classList.contains('responsive')) {
+                navMenu.classList.remove('responsive');
+            }
+        });
+    });
+});
+
 
 // add shadow on navigation bar while scrolling
       window.onscroll = function() {headerShadow()};
