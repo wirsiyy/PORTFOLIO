@@ -591,12 +591,12 @@ footer{
         align-items: center;
         justify-content: center;
     }
-    .active-link{
+    /* .active-link{
         position: relative;
         color: red;
         transition: .3s;
-    }
-    .active-link::after{
+    } */
+    /* .active-link::after{
         content: '';
         position: absolute;
         left: 50%;
@@ -606,7 +606,7 @@ footer{
         height: 5px;
         background: red;
         border-radius: 50%;
-    }
+    } */
     .featured-box{
         flex-direction: column;
         justify-content: center;
